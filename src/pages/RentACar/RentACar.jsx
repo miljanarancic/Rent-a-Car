@@ -38,10 +38,15 @@ const RentACar = () => {
     <div className={styles.RentACar}>
       <div className={styles.RentACar__header}>
         <h1>Rent-a-Car</h1>
-        <Button
-          text="Rent-a-Car"
-          onClick={() => setRentOpen(true)}
-        />
+        {vehicles.length && customers.length
+          ? (
+            <Button
+              text="Rent-a-Car"
+              onClick={() => setRentOpen(true)}
+            />
+          )
+          : <p>You must create customers and vehicles first</p>
+        }
       </div>
       <div className={styles.RentACar__list}>
         {rents && rents.length
@@ -55,13 +60,19 @@ const RentACar = () => {
           : <p className={styles['RentACar__no-items']}>No rents added...</p>
         }
       </div>
-      <RentACarPopup
-        open={rentOpen}
-        vehicles={vehicles}
-        customers={customers}
-        onSubmit={rent => addRent(rent)}
-        onCancel={() => setRentOpen(false)}
-      />
+      {vehicles.filter(vehicle => vehicle.count > 0).length && customers.length
+      ? (
+          <RentACarPopup
+            open={rentOpen}
+            vehicles={vehicles}
+            customers={customers}
+            onSubmit={rent => addRent(rent)}
+            onCancel={() => setRentOpen(false)}
+          />
+        )
+        : null
+      }
+
     </div>
   )
 }
