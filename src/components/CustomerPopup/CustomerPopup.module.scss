@@ -1,0 +1,10 @@
+.CustomerPopup {
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+
+    & input:first-child {
+      margin-right: 0.5em;
+    }
+  }
+}

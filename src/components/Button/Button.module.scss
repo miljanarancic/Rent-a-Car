@@ -1,0 +1,10 @@
+@import '../../utils/variables';
+
+.Button {
+  padding: 0.8em 0.8em;
+  border: none;
+  border-radius: 5px;
+  font-size: $fs-normal;
+  color: white;
+  background-color: $primary-color;
+}

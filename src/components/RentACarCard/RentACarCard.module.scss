@@ -1,0 +1,49 @@
+@import "../../utils/variables";
+@import "../../utils/mixins";
+
+.CustomerCard {
+  margin: 1em 2em;
+  width: calc(25% - 4em);
+
+  @include bpLaptopL {
+    width: calc(33% - 4em);
+  }
+
+  @include bpLaptop {
+    width: calc(50% - 4em);
+  }
+
+  @include bpTablet {
+    width: calc(100% - 4em);
+  }
+
+  &__title {
+    padding: 1em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    background-color: $primary-color;
+
+    &__name {
+      flex: 1 1;
+      margin: 0;
+    }
+  }
+
+  &__details {
+    margin: 0;
+    padding: 1em 2em;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    &__item {
+      margin-bottom: 1em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

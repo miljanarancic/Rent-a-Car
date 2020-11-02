@@ -1,0 +1,19 @@
+@import "../../utils/variables";
+
+.RentACar {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__no-items {
+    margin-left: 2em;
+  }
+}

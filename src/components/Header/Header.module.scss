@@ -1,0 +1,46 @@
+@import "../../utils/variables";
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 60px;
+  background-color: $primary-color;
+
+  &__navigation {
+    &__item {
+      position: relative;
+      margin-right: 1.5em;
+      padding: 5px 0;
+      text-decoration: none;
+      color: white;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: white;
+        transform: scaleX(0);
+        transition: transform 300ms;
+      }
+
+      &::before {
+        top: 0;
+        transform-origin: left;
+      }
+
+      &::after {
+        bottom: 0;
+        transform-origin: right;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

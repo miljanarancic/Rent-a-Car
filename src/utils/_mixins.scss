@@ -1,0 +1,23 @@
+@mixin bpLaptopL {
+  @media screen and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin bpLaptop {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin bpTablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin bpMobileL {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}

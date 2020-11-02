@@ -1,0 +1,16 @@
+@import "../../utils/variables";
+
+.Input {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0;
+
+  &__element {
+    margin-bottom: 0.2em;
+    padding: 0.4em;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    font-size: $fs-large;
+  }
+}

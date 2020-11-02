@@ -1,0 +1,18 @@
+.VehiclePopup {
+  &__rows {
+    display: flex;
+
+    &__row:first-child {
+      margin-right: 1em;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+
+    & input:first-child {
+      margin-right: 0.5em;
+    }
+  }
+}
